@@ -1,0 +1,1 @@
+import{describe,expect,it}from'vitest';import{calculateProjectHealth}from'./health';describe('project health',()=>{it('penalizes overdue and high risks',()=>{const r=calculateProjectHealth({overdueDeadlines:2,highRisks:1,staleWaiting:0,staleDelegations:0,daysSinceUpdate:0});expect(r.score).toBe(68);expect(r.status).toBe('attention')})});
