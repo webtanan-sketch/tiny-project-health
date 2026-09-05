@@ -1,74 +1,22 @@
-# Tiny Project Health — سلامت پروژه TinyManager
+# Tiny Project Health — سلامت پروژه
 
-[🇮🇷 فارسی](README.md) · [🇬🇧 English](README.en.md)
+ماژول سیگنال مدیریتی TinyManager که سلامت پروژه را از داده‌های واقعی سایر ماژول‌ها محاسبه می‌کند، نه از پرسشنامه دستی مدیر.
 
-> یک پاسخ سریع به سؤال مدیر: **«این پروژه واقعاً سالم است یا نیاز به توجه دارد؟»** بدون اینکه مدیر مجبور شود چندین KPI را دستی پر کند.
+سیگنال‌های فعلی:
 
-## وضعیت
+- Deadline عقب‌افتاده
+- Risk با شدت بالا
+- Waiting For قدیمی
+- Delegation بدون پیگیری
+- مدت زمان از آخرین به‌روزرسانی
 
-**Foundation — 0.1.0**
+## Alpha
 
-قابلیت اجرایی هنوز منتشر نشده است؛ این Repository فعلاً قرارداد محصول و ماژول را مشخص می‌کند.
+- امتیاز 0 تا 100
+- Healthy / Attention / Critical
+- دلایل قابل توضیح برای کاهش امتیاز
+- Standalone preview
+- TinyManager Module package
+- TypeScript declarations + tests + CI
 
-## اصل طراحی
-
-Project Health باید تا جای ممکن از داده‌های موجود TinyManager استفاده کند:
-
-- Deadlineهای عقب‌افتاده
-- Riskهای باز و بحرانی
-- Delegationهای عقب‌افتاده
-- Waiting Forهای طولانی
-- تصمیم‌های باز
-- تازگی آخرین Update
-
-مدیر فقط وقتی چیزی قابل استخراج نیست، یک سؤال کوتاه دریافت می‌کند.
-
-مسیر آینده:
-
-```text
-مدیر: وضعیت پروژه آریا چطوره؟
-↓
-Tiny AI پروژه را پیدا می‌کند
-↓
-داده ماژول‌ها را جمع می‌کند
-↓
-Health Score + دلیل‌های اصلی
-↓
-پیشنهاد اقدام بعدی
-```
-
-## خروجی هدف
-
-```text
-Project Health: 72 / 100
-🟡 نیازمند توجه
-
-دلایل اصلی:
-- ۲ موعد عقب‌افتاده
-- ۱ ریسک با امتیاز بالا
-- ۳ روز از آخرین Update گذشته
-```
-
-## قابلیت‌های برنامه‌ریزی‌شده
-
-- Health Score قابل توضیح
-- وضعیت Green / Attention / Critical
-- استفاده از Shared Projects
-- Dashboard Widget
-- Trend کوتاه‌مدت
-- Explainability: دلیل امتیاز همیشه مشخص باشد
-- Tiny AI Query و Actions
-
-## Tiny AI Actions برنامه‌ریزی‌شده
-
-- `tiny-project-health.calculate`
-- `tiny-project-health.explain`
-- `tiny-project-health.recommend-next-action`
-
-## معماری
-
-TypeScript + React؛ قابل اجرا به‌صورت Standalone و Module داخل [TinyManager](https://github.com/webtanan-sketch/tinymanager).
-
-## مجوز
-
-MIT
+نسخه: `0.1.0-alpha.1`
