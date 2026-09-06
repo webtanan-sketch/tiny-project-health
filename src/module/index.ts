@@ -1,1 +1,6 @@
-export{moduleManifest}from'../../module.manifest';export{ProjectHealthWorkspace,type ProjectHealthWorkspaceProps}from'../components/ProjectHealthWorkspace';export{calculateProjectHealth}from'../domain/health';export type{ProjectHealthInput,ProjectHealthResult}from'../domain/health';
+import '../styles.css';
+
+export { moduleManifest } from '../../module.manifest';
+export { ProjectHealthWorkspace, type ProjectHealthWorkspaceProps } from '../components/ProjectHealthWorkspace';
+export { calculateProjectHealth } from '../domain/health';
+export type { ProjectHealthInput, ProjectHealthResult } from '../domain/health';
